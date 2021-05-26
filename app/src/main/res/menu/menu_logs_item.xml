@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_white"
+        android:title="添加到白名单" />
+    <item
+        android:id="@+id/add_black"
+        android:title="添加到黑名单" />
+</menu>

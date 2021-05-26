@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingStart="40dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_logo" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/primaryCardColorStopped"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/state_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_stopped_24" />
+
+                <TextView
+                    android:id="@+id/state_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@+id/state_icon"
+                    android:text="未开启"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/state_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/state_title"
+                    android:layout_alignStart="@+id/state_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:text="轻按开启"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/white_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/white_list_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_profiles_24" />
+
+                <TextView
+                    android:id="@+id/white_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/white_list_icon"
+                    android:text="白名单"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:id="@+id/white_list_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/white_list_title"
+                    android:layout_alignStart="@id/white_list_title"
+                    android:layout_marginTop="5dp"
+                    android:text="0 / 0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/black_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/black_list_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_profiles_24" />
+
+                <TextView
+                    android:id="@+id/black_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/black_list_icon"
+                    android:text="黑名单"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:id="@+id/black_list_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/black_list_title"
+                    android:layout_alignStart="@id/black_list_title"
+                    android:layout_marginTop="5dp"
+                    android:text="0 / 0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="25dp"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:text="日志"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableStartCompat="@drawable/ic_baseline_logs_24" />
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="25dp"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:text="设置"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableStartCompat="@drawable/ic_baseline_settings_24" />
+
+        <TextView
+            android:id="@+id/support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="25dp"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:text="支持"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableStartCompat="@drawable/ic_baseline_feedback_24" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="25dp"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:text="关于"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableStartCompat="@drawable/ic_baseline_about_24" />
+
+    </LinearLayout>
+</ScrollView>
